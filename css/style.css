@@ -1,0 +1,11 @@
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+textarea {
+  resize: none;
+}

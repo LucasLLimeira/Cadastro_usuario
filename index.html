@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo Livre</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS opcional -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Estilo Livre</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="bg-dark text-white text-center d-flex align-items-center" style="height: 80vh;">
+  <div class="container">
+    <h1 class="display-4">Seu estilo começa aqui</h1>
+    <p class="lead">Cortes modernos e atendimento de qualidade</p>
+    <a href="#contato" class="btn btn-light btn-lg">Agendar horário</a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-5">
+  <div class="container text-center">
+    <h2>Sobre Nós</h2>
+    <p>Na Estilo Livre, oferecemos um atendimento diferenciado, com foco em estilo, conforto e qualidade. Nossa equipe está preparada para proporcionar a melhor experiência.</p>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Serviços</h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="img/corte.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Corte de Cabelo</h5>
+            <p class="card-text">Estilo moderno e personalizado.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="img/barba.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Barba</h5>
+            <p class="card-text">Acabamento perfeito e profissional.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="img/hidratacao.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hidratação</h5>
+            <p class="card-text">Cuidados especiais para seu cabelo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DEPOIMENTOS (CARROSEL) -->
+<section id="depoimentos" class="py-5">
+  <div class="container text-center">
+    <h2>Depoimentos</h2>
+
+    <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <p class="lead">"Excelente atendimento!"</p>
+          <small>- João</small>
+        </div>
+
+        <div class="carousel-item">
+          <p class="lead">"Melhor barbearia da cidade!"</p>
+          <small>- Carlos</small>
+        </div>
+
+        <div class="carousel-item">
+          <p class="lead">"Profissionais incríveis!"</p>
+          <small>- Pedro</small>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Contato</h2>
+
+    <form class="mx-auto" style="max-width: 500px;">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Nome" required>
+      </div>
+
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email" required>
+      </div>
+
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
+      </div>
+
+      <button class="btn btn-dark w-100">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
