@@ -1,0 +1,39 @@
+{
+  "appName": "UserApp",
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo escuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "ptBR": "Português (BR)",
+    "enUS": "English (US)"
+  },
+  "validation": {
+    "required": "Campo obrigatório",
+    "invalidEmail": "E-mail inválido",
+    "minPassword": "Mínimo de 8 caracteres",
+    "invalidCpf": "CPF inválido",
+    "invalidPhone": "Telefone inválido",
+    "invalidCep": "CEP inválido (8 dígitos)",
+    "minLength": "Campo muito curto",
+    "stateLength": "Use a sigla do estado (ex: SP)"
+  },
+  "welcome": {
+    "title": "Bem-vindo, {{name}}!",
+    "subtitle": "Sua conta foi criada com sucesso.",
+    "loginTitle": "Bem-vindo de volta, {{name}}!",
+    "loginSubtitle": "Você está logado no UserApp.",
+    "goToDashboard": "Ir para o Dashboard"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "greeting": "Olá, {{name}}!",
+    "description": "Você está logado no UserApp.",
+    "yourEmail": "E-mail",
+    "memberSince": "Membro desde",
+    "logout": "Sair"
+  },
+  "showPassword": "Mostrar senha",
+  "hidePassword": "Ocultar senha"
+}
