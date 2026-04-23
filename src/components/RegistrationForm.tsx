@@ -13,12 +13,10 @@ import { maskCpf, maskPhone, maskCep } from '@/lib/masks'
 import Input from './Input'
 
 interface RegistrationFormProps {
-  onSwitchToLogin: () => void
   onSuccess: (type: 'register') => void
 }
 
 export default function RegistrationForm({
-  onSwitchToLogin,
   onSuccess,
 }: RegistrationFormProps) {
   const { t } = useTranslation('auth')
@@ -82,7 +80,7 @@ export default function RegistrationForm({
   }
 
   return (
-    <div className="p-4 md:p-5 h-full">
+    <div className="p-4 pb-6  md:p-5 h-full">
       {/* Header */}
       <div className="mb-3">
         <h1 className="text-lg font-bold text-slate-800 dark:text-slate-100">
@@ -93,7 +91,7 @@ export default function RegistrationForm({
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form className='pb-4' onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="space-y-2">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {/* Name */}
@@ -304,18 +302,6 @@ export default function RegistrationForm({
           {isSubmitting ? t('register.loading') : t('register.submit')}
         </button>
       </form>
-
-      {/* Switch to login */}
-      <p className="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">
-        {t('register.hasAccount')}{' '}
-        <button
-          type="button"
-          onClick={onSwitchToLogin}
-          className="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          {t('register.loginLink')}
-        </button>
-      </p>
     </div>
   )
 }

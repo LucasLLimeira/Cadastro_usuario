@@ -7,20 +7,15 @@ import WelcomeModal from './WelcomeModal'
 import { useAuth } from '@/context/AuthContext'
 
 interface AuthContainerProps {
+  isLogin: boolean
   onModeChange?: (isLogin: boolean) => void
   onLoginError?: (msg: string | null) => void
 }
 
-export default function AuthContainer({ onModeChange, onLoginError }: AuthContainerProps) {
+export default function AuthContainer({ isLogin, onModeChange, onLoginError }: AuthContainerProps) {
   const { session } = useAuth()
-  const [isLogin, setIsLogin] = useState(true)
   const [showModal, setShowModal] = useState(false)
   const [welcomeType, setWelcomeType] = useState<'login' | 'register'>('login')
-
-  const switchTo = (login: boolean) => {
-    setIsLogin(login)
-    onModeChange?.(login)
-  }
 
   const handleSuccess = (type: 'login' | 'register') => {
     setWelcomeType(type)
@@ -48,7 +43,6 @@ export default function AuthContainer({ onModeChange, onLoginError }: AuthContai
           ].join(' ')}
         >
           <LoginForm
-            onSwitchToRegister={() => switchTo(false)}
             onSuccess={handleSuccess}
             onError={onLoginError}
           />
@@ -64,7 +58,6 @@ export default function AuthContainer({ onModeChange, onLoginError }: AuthContai
           ].join(' ')}
         >
           <RegistrationForm
-            onSwitchToLogin={() => switchTo(true)}
             onSuccess={handleSuccess}
           />
         </div>

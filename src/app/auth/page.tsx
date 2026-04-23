@@ -37,13 +37,24 @@ export default function AuthPage() {
             'w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 overflow-hidden',
             'flex flex-col transition-all duration-500 ease-in-out',
             'max-w-lg',
-            isLogin ? 'max-h-128' : 'max-h-[calc(100vh-7rem)]',
+            isLogin ? 'max-h-106' : 'max-h-[calc(100vh-10rem)]',
           ].join(' ')}
         >
           <div className="h-full min-h-0 flex flex-col">
-            <AuthContainer onModeChange={setIsLogin} onLoginError={setLoginError} />
+            <AuthContainer isLogin={isLogin} onModeChange={setIsLogin} onLoginError={setLoginError} />
           </div>
         </div>
+
+        <p className="w-full max-w-lg text-center text-sm text-slate-500 dark:text-slate-400">
+          {isLogin ? t('login.noAccount', { ns: 'auth' }) : t('register.hasAccount', { ns: 'auth' })}{' '}
+          <button
+            type="button"
+            onClick={() => setIsLogin((value) => !value)}
+            className="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            {isLogin ? t('login.registerLink', { ns: 'auth' }) : t('register.loginLink', { ns: 'auth' })}
+          </button>
+        </p>
 
         {/* Login error toast — below the card, no layout shift */}
         <div

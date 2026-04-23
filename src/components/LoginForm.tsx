@@ -12,12 +12,11 @@ import { getRememberedEmail } from '@/lib/storage'
 import Input from './Input'
 
 interface LoginFormProps {
-  onSwitchToRegister: () => void
   onSuccess: (type: 'login') => void
   onError?: (msg: string | null) => void
 }
 
-export default function LoginForm({ onSwitchToRegister, onSuccess, onError }: LoginFormProps) {
+export default function LoginForm({ onSuccess, onError }: LoginFormProps) {
   const { t } = useTranslation('auth')
   const { login } = useAuth()
 
@@ -53,9 +52,9 @@ export default function LoginForm({ onSwitchToRegister, onSuccess, onError }: Lo
   }
 
   return (
-    <div className="p-8 md:p-10">
+    <div className="p-5 md:p-7 pb-6 md:pb-8">
       {/* Header */}
-      <div className="mb-8">
+      <div className="mb-5">
         <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100">
           {t('login.title')}
         </h1>
@@ -118,18 +117,6 @@ export default function LoginForm({ onSwitchToRegister, onSuccess, onError }: Lo
           {isSubmitting ? t('login.loading') : t('login.submit')}
         </button>
       </form>
-
-      {/* Switch to register */}
-      <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
-        {t('login.noAccount')}{' '}
-        <button
-          type="button"
-          onClick={onSwitchToRegister}
-          className="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          {t('login.registerLink')}
-        </button>
-      </p>
     </div>
   )
 }
